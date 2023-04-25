@@ -1,0 +1,212 @@
+body{
+    /*background-image: url('https://i.pinimg.com/originals/e6/73/88/e673887d5937ffcac040ce956f23ae53.jpg');*/
+    background-image: url('/Plural Sight/Img/HD-wallpaper-acoustic-guitar-guitar-musical-instrument-brown-sand.jpg');
+    background-size:     cover; 
+    background-repeat: no-repeat, repeat;
+    background-position: fixed;                  
+}
+
+main{
+    /*
+    background-color: NavajoWhite;
+    background-image: linear-gradient(to bottom right, NavajoWhite , rgba(0, 0, 255, 0.066)); 
+    border-radius: 25px;
+    */
+}
+
+#H1 {
+    color: rgb(255, 38, 0);
+    text-align: center;
+    font-size: 16px;
+    font-size: 2.5rem;
+}
+
+/* This is for all hyper link text for basic formatting and styles for the nav
+*/
+a:link { 
+    text-decoration: none; /* Remove bullets */
+  }
+
+
+  a:visited { 
+    text-decoration: none; /* Remove bullets */
+  }
+
+
+  a:hover { 
+    text-decoration: none; /* Remove bullets */
+  }
+
+
+  a:active { 
+    text-decoration: none; /* Remove bullets */
+  }
+
+  #custom-nav ul {
+    text-align: center;
+  }
+
+ #custom-nav li {
+    display: inline;
+    background-color: beige;
+    border-style: solid;
+    border-color: #A52A2A;
+    border-radius: 25px;
+    padding: 5px;
+  }
+
+
+ #custom-nav li :hover {
+    background-color: rgb(194, 255, 159);
+  }
+
+  .guitar-img{
+    position: relative;
+    overflow: hidden;
+    width: 150px;
+    height: 200px;
+    object-fit: fit;
+  }
+
+  /*rules and styles for grid, rows, abd columns*/
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    grid-template-columns: 200px 200px 200px;
+    justify-content: center;
+  
+}
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    padding: 20px;
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .grid-item-header {
+    background-color: rgba(255, 255, 255, 0.8);
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .grid-container > div:nth-child(1){
+    grid-column: span 3;
+  }
+  .grid-container > div:nth-child(3){
+    grid-column: span 2;
+      }
+  .grid-container > div:nth-child(5){
+    grid-column: span 2;
+      }    
+   .grid-container > div:nth-child(7){
+     grid-column: span 2;
+      }            
+  /* a class to center any tag we assign */
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+  }
+
+  .footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+/*
+  .footer{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    color: antiquewhite;
+  }
+*/
+
+  .white-text{
+    color: antiquewhite;
+    position: relative;
+
+  }
+
+    /*
+    
+    rules and styles for grid, rows, abd columns*/
+    .Products-grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+        grid-template-columns: 300px 300px;
+        justify-content: center;
+      
+    }
+      .Products-grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        font-size: 15px;
+        text-align: center;
+      }
+    
+      #GoLeft{
+        text-align: left !important;
+      }
+
+      .small-cart-text{
+        text-align: left;
+        font-size: 12px;
+        font-size: .8rem;
+
+      }
+    
+      .Products-grid-container > div:nth-child(1){
+    grid-column: span 2;
+      }
+
+      .Products-img{
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius:100px;
+      }
+
+      a img:hover {
+        opacity: 0.7;
+        filter: alpha(opacity=40);
+        transition: opacity .5s;  
+    }
+    a img:hover::after {
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+        transition: opacity .5s;  
+    }
+
+    /*Registion Styles*/.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+#bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+} 
+
+#login-width{
+  width: 550px;
+}
