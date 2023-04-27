@@ -1,3 +1,20 @@
+/*
+NOTE : In contrast to the class attribute, which allows space-separated values, elements can only have one single ID value. 
+This bacically means that we have to becareful woth what we make IDs and what we assign them to.
+IDs override other rules because they have a higher precedence then anything else in the levels of specificity then anyhtoing else in html
+reference for IDs (check the 2nd paragraph):
+https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id 
+
+The specification of classes in html (top to bottom):
+1. Inline styles - Example: <h1 style="color: pink;">
+2. IDs - Example: #navbar
+3. Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+4. Elements and pseudo-elements - Example: h1, ::before
+
+heres the reference to the specification in CSS :
+https://www.w3schools.com/css/css_specificity.asp
+*/
+
 body{
     /*background-image: url('https://i.pinimg.com/originals/e6/73/88/e673887d5937ffcac040ce956f23ae53.jpg');*/
     background-image: url('../Img/HD-wallpaper-acoustic-guitar-guitar-musical-instrument-brown-sand.jpg');
@@ -7,6 +24,11 @@ body{
 }
 
 /*
+the purpose of using the main tag is to put everything that is important in betweeen these tags. This doesn't necessarily mean we
+need to use it but its useful for new deveelopers looking to make there code more oragnized. 
+content in this tag should not repeat and there can only be one main tag.
+the main tag can not be inside anything else but the body tag.
+
 main{
     
     background-color: NavajoWhite;
@@ -15,6 +37,7 @@ main{
     
 }*/
 
+/*ID for the PGH Guitars header*/
 #H1 {
     color: rgb(255, 38, 0);
     text-align: center;
@@ -47,6 +70,7 @@ a:link {
     text-align: center;
   }
 
+  /*ID for the nav (hopefully these override the Bootstrap in my code)*/
  #custom-nav li {
     display: inline;
     background-color: beige;
@@ -61,6 +85,7 @@ a:link {
     background-color: rgb(194, 255, 159);
   }
 
+  /*This class is to format pictures in the index*/
   .guitar-img{
     position: relative;
     overflow: hidden;
@@ -70,13 +95,31 @@ a:link {
   }
 
   /*rules and styles for grid, rows, abd columns*/
+
+  /*
+  This is a grid-styled layout. this is useful because it allows us to put things in parts of the DOM easily without guessing 
+  where they might land on the page. 
+  they help us to create layouts in which our elements won't jump around or change width as we move from page to page,
+  providing greater consistency on our websites.
+
+  they help us make elements not jump around the webpage and easily create sections in the webpage
+  here are some references for a HTML grid-layout:
+  o https://www.w3schools.com/css/css_grid.asp 
+  o https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+  */
+
+  /*
+  To make an HTML element behave as a grid container, you have to set the display property to grid or inline-grid.
+  Grid containers consist of grid items, placed inside columns and rows.
+  Note: If you have more than 4 items in a 4 columns grid, the grid will automatically add a new row to put the items in.
+  */
   .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    /*The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column.*/
+    grid-template-columns: auto auto auto;/*the auto will make the sections of the grid items fit the grid, responsively*/
     padding: 10px;
-    grid-template-columns: 200px 200px 200px;
-    justify-content: center;
-  
+    grid-template-columns: 200px 200px 200px;/*this will define the height, width and number of columns per row*/
+    justify-content: center;/*this will mkae the content fit to each side of the page and responsive (text, pics, elements, ect.)*/  
 }
   .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
@@ -94,6 +137,10 @@ a:link {
     text-align: center;
   }
 
+  /*
+  we can make columns in certian rows take more or less space in the layout
+  the span is the number of columns we want to span our item to span and the nth-child is the number of the specific grid item we want to change
+  */
   .grid-container > div:nth-child(1){
     grid-column: span 3;
   }
@@ -106,6 +153,7 @@ a:link {
    .grid-container > div:nth-child(7){
      grid-column: span 2;
       }            
+
   /*class to center any tag we assign */
   .center {
     display: block;
@@ -115,6 +163,7 @@ a:link {
     text-align: center;
   }
 
+  /*class for the footer*/
   .footer{
     position: fixed;
     left: 0;
@@ -137,6 +186,11 @@ a:link {
   }
 */
 
+  .justifiy-text{
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
   .white-text{
     color: antiquewhite;
     position: relative;
@@ -145,7 +199,9 @@ a:link {
 
     /*
     
-    rules and styles for grid, rows, abd columns*/
+    rules and styles for grid, rows, abd columns
+    (this grid has 2 columns)
+    */
     .Products-grid-container {
         display: grid;
         grid-template-columns: auto auto;
@@ -161,6 +217,7 @@ a:link {
         text-align: center;
       }
     
+      /*to align text to the left */
       #GoLeft{
         text-align: left !important;
       }
@@ -208,6 +265,7 @@ a:link {
   right: 0;
 } 
 
+/*widht of the login content*/
 #login-width{
   max-width: 550px;
 }
@@ -217,6 +275,7 @@ a:link {
 
 these are reference to media queries
 https://www.emailonacid.com/blog/article/email-development/emailology_media_queries_demystified_min-width_and_max-width/
+https://www.w3schools.com/css/css3_mediaqueries_ex.asp
 
 */
 @media screen and (min-width: 1001px) {
@@ -240,6 +299,20 @@ https://www.emailonacid.com/blog/article/email-development/emailology_media_quer
 
 @media screen and (min-width: 533px){
   .ThisIsHidden533{
+    display: none;
+  }
+}
+
+/* Media Queries for the Contact Page */
+
+@media screen and (min-width: 847px){
+  .ThisIsHidden847{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 848px){
+  .ThisIsHidden848{
     display: none;
   }
 }
