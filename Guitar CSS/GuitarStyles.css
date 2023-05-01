@@ -271,7 +271,12 @@ a:link {
 }
 
 
-/* Media Queries for the Login Page 
+/* Media Queries are needed for when the page breaks at certian points. thanks to media quries we can 
+take away or add elements to the DOM whenever we want simply based on the screen height or width.
+by using a combination of classes and media queries we can basically fix all the breaking points in each page 
+without effecting each other, respectively.
+
+Media Queries for the Login Page 
 
 these are reference to media queries
 https://www.emailonacid.com/blog/article/email-development/emailology_media_queries_demystified_min-width_and_max-width/
